@@ -1,0 +1,658 @@
+
+/*--------------------------------------------------GENERICO-----------------------------------------------------*/
+
+* {
+    Margin:0;
+    padding:0;
+    outline: 0;
+    }
+
+body {
+    background-color: #212529;
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    }
+
+header {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    align-items:center;
+    background-image: linear-gradient(black 20%, rgba(0, 0, 0, 0.000));
+    margin-bottom: 100px;
+    width: 100%;
+    border-bottom: solid .20rem rgba(255, 255, 255, 0.726);
+    }
+
+.logo {
+    margin: 15px;
+    }
+
+/*-----------------------------------------ESTRUCTURA DE MENÚ-----------------------------------------------------*/
+
+
+header nav ul {
+    list-style-type: none;
+    margin-right: 30px;
+    text-align: right;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 10px;
+    }
+
+
+.menu  li {
+    position:relative;
+    font-size: 15pt;
+    }
+
+.menu  li  a {
+    padding: 0px 15px;
+    font-family: 'Cabin', sans-serif;
+    text-decoration: none;
+    }
+
+.menu li a:hover {
+    color: #cb1810;
+    transition: all .3s;
+   
+    }
+
+.subMenu {
+    position: absolute;
+    text-align: left;
+    width: 200%;
+    visibility: hidden;
+    margin-left: 11px;
+    font-size: 13pt;
+    opacity: 0;
+    transition: opacity 1.5s;
+    flex-direction: column;
+    }
+
+
+.subMenu li a {
+    display: block;
+    padding: 5px;
+    
+    }
+
+.menu li:hover .subMenu {
+    visibility: visible;
+    opacity: 1;
+    }
+
+.subMenuCorreccion {
+    width: 200%;
+    transform: translateX(-32px);
+    }
+
+.linkActivo {
+    border-bottom: white .15rem solid;
+}
+
+
+/*-----------------------------------------ESTRUCTURA DE GALERIA-------------------------------------------------*/
+
+.titulos {
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: white;
+    color: white;
+    font-size: 25pt;
+    font-weight: bold;
+    font-family: 'Cabin', sans-serif;
+    margin-bottom: 130px;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    }
+
+
+.galerias {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 200px;
+    align-content: center;
+    }
+
+.galerias li {
+    display: flex;
+    width: 200px;
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.500) 4px 4px;
+    border: #cb1810 solid .25rem;
+    background-color: rgba(133, 133, 133, 0.137);
+    font-size: 20pt;
+    font-family: 'Cabin', sans-serif;  
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 20px;
+    }
+
+.galerias li a {
+    color: white;
+}
+
+.nota {
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    font-size: 10pt;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    margin: 20px;
+    font-weight: bold;
+    }
+
+/*------------------------------------------ESTRUCTURA DE FOOTER--------------------------------------------------*/
+
+footer {
+    border-top: solid .20rem rgba(255, 255, 255, 0.726);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 80%);
+    margin-top: 100px;
+    padding-bottom: 5px;
+    }
+
+.estructuraFooter{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navFooter{
+    margin: 20px 10px;
+}
+
+.navFooter ul li {
+    font-size: 13pt;
+    list-style: none;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.navFooter ul a {
+    color: #d3d3d3;
+}
+
+.redesSociales ul {
+    display: flex;
+    flex-flow: row wrap;
+    }
+
+.redesSociales li {
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+    list-style-type: none;
+    margin: 0px 15px;
+    margin-top: 15px;
+    }
+
+.redesSociales img {
+    width: 30px;
+    height: 30px;
+}
+
+footer section {
+    display: flex;
+    flex-flow: column wrap;
+    margin-right: 30px;
+}
+
+footer section p {
+    font-family: 'Cabin', sans-serif;
+    color: #d3d3d3;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: rgb(39, 39, 39);
+    text-align: end;
+    margin-top: 20px;
+    }
+
+footer section span {
+    font-family: 'Cabin', sans-serif;
+    color: #d3d3d3;
+    font-size: 12pt;
+    font-weight: bold;
+    text-shadow: rgb(39, 39, 39);
+    text-align: end;
+        }
+
+
+/*------------------------------------------------CSS INICIO-----------------------------------------------------*/
+
+.conjuntoInicio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+    }
+
+.tituloInicio{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: #cb1810; 
+    font-weight: bold;
+    font-family: 'Cabin', sans-serif;
+    font-size: 30pt;
+    text-align: justify;
+    margin-right: 100px;
+    margin-top: 40px;
+    letter-spacing: 5px;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    transform: translateX(50px);
+    }
+
+.banner img {
+    width: 800px;
+    height: auto;
+    border-radius: 60px;      
+    }
+
+.textoInicio {
+    display: flex;
+    flex-wrap: wrap;
+    color: white; 
+    font-weight: 400;
+    font-family: 'Cabin', sans-serif;
+    font-size: 15pt;
+    text-align: justify;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    width: 800px;
+    margin: 30px 0;
+    }
+
+.conjuntoInicio p {
+    color: white; 
+    font-weight: 600;
+    font-family: 'Cabin', sans-serif;
+    font-size: 18pt;
+    text-align: justify;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    width: 800px;
+    margin: 30px 0;
+    }
+
+
+
+/*---------------------------------------------CSS FOTOS----------------------------------------------------------*/
+
+
+.tituloGaleria {
+    margin-bottom: 20px;
+}
+
+.tituloGaleria a {
+    color: white;
+    background-color: #cb19109f;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 25px;
+    text-align: justify;
+    margin-left: 20px;
+    }
+
+
+.galeria-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-content: center;
+    margin-left: 20px;
+    margin-bottom: 100px;
+    
+    }
+
+.galeria-card a > img {
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+    transition: 0.5s;
+    padding: 2px;
+    border-radius: 10px;
+    vertical-align: middle;
+    filter:grayscale(5%);
+    }
+
+.galeria-card img:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+    position: relative;
+    z-index: 100;
+    }
+
+
+/*-------------------------------------------BOTON FLOTANTE-------------------------------------------------------*/
+
+.cmn-divfloat {
+    position: fixed !important;
+    bottom: 45px;
+    right: 15px;
+    display: none;
+    z-index: 10000;
+    }
+
+.cmn-btncircle {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 6px 0px;
+    border-radius: 15px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #cb1810;
+    }
+
+
+/*---------------------------------------CSS VIDEOS*//*CSS DISEÑOS-----------------------------------------------*/
+
+.contenedorVideos {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    }
+  
+.modal-contenido{
+    background-color:rgb(0, 0, 0);
+    width:560px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 3% auto;
+    }
+  
+.modal-contenido h2 {
+    padding: 10px 5px;
+    color: white;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    }
+  
+.modal{
+    background-color: rgba(0, 0, 0, 0.8);
+    position:fixed;
+    top:0px;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+    }
+  
+.modal-footer {
+    display: flex;
+    flex-flow: row wrap;
+    }
+  
+.btn-rojo{
+    color: white;
+    text-align: center;
+    background-color: #cb1810;
+    border-radius: 10px;
+    width: 60px;
+    height: 20px;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    transform: translateX(400%);
+    }
+  
+#praia2anos:target {
+    opacity:1;
+    pointer-events:auto;
+    }
+  
+#praia3anos:target {
+    opacity:1;
+    pointer-events:auto;
+    }
+       
+       
+
+/*------------------------------------------------CSS CONTACTO---------------------------------------------------*/
+
+.contacto {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-family: 'Cabin', sans-serif;
+    color: #cb1810;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    margin: 80px 0px;
+    letter-spacing: 5px;
+    }
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+fieldset {
+    display: flex;
+    flex-flow: column wrap;
+    border-style: none;
+    border: solid .20rem rgba(255, 255, 255, 0.726);
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    margin: 0px 10px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+fieldset input {
+    width: 100%;
+    height: 30px;
+}
+
+fieldset textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.iconoContacto img {
+    width: 30px;
+    height: 30px;
+    margin: 7px 0px;
+    }
+
+.botonEnviar {
+    font-family: 'Cabin', sans-serif;
+    font-size: 14pt;
+    background-color: #cb1810;
+    color: white;
+    font-weight: bold;
+    margin: 15px 0px;
+    padding: 10px 15px;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    border-radius: 10px;
+    }
+
+.botonEnviar:hover {
+    transform: scale(1.2);
+    }
+
+
+
+
+    
+
+/*---------------------------------------------MEDIA QUERIES-----------------------------------------------------*/
+
+/*-----------------------------------------------CELULARES-------------------------------------------------------*/
+    
+@media (max-width: 768px) {
+
+header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px;
+    box-sizing: border-box;
+} 
+
+
+.subMenu li a {
+    display: none;
+    }
+
+.textoInicio {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15pt;
+    margin: 10px 10px; 
+}
+
+
+.cmn-divfloat {
+    position: fixed !important;
+    bottom: 30px;
+    right: 5px; 
+}
+
+.cmn-btncircle {
+    width: 10px;
+    height: 10px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    font-size: 6px;
+    text-align: center;
+    background-color: #cb1810;
+    transform: translateX(-60px); 
+}
+
+
+.banner img {
+    width: 320px;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.conjuntoInicio p {
+    font-size: 15pt;
+    margin: 5px;
+}
+
+.titulos {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.galerias {
+    margin-bottom: 40px;
+}
+
+.galerias li {
+    width: 120px;
+    height: 40px;
+    font-size: 11pt;
+    border-radius: 20px; 
+}
+
+.nota {
+    padding: 15px 0;
+}
+
+.gallery-card a > img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    transition: 0.5s;
+    padding: 2px;
+    border-radius: 10px; 
+}
+
+.columnaGrande img {
+    border-radius: 5px; 
+} 
+
+.estructuraFooter {
+    display: flex;
+    flex-direction: column;
+}
+
+.navFooter ul li {
+    transform: translateX(-20px);
+}
+
+
+.redesSociales {
+    margin-bottom: 30px;
+}
+
+footer section p {
+    margin-bottom: 10px;
+    transform: translateX(15px);
+}
+
+footer section span {
+    transform: translateX(-30px);
+}
+
+}
+    
+/*-------------------------------------------------TABLETS-------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 992px) {
+
+.banner img {
+    width: 500px;
+    height: auto;
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+
+.textoInicio {
+    margin: 10px 30px;
+}
+
+.conjuntoInicio p {
+    margin: 10px 30px;
+}
+
+}
+
+/*----------------------------------------TABLETS EN HOTIZONTAL Y IPAD PRO---------------------------------------*/
+
+@media (min-width: 993px) and (max-width: 1300px) {
+    .banner img {
+        width: 600px;
+        height: auto;
+        border-radius: 30px;
+    }
+}
+
+
