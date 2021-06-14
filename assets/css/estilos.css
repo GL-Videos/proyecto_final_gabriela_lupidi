@@ -538,9 +538,8 @@ header nav ul {
 
 
 .cmn-divfloat {
-    position: fixed !important;
-    bottom: 30px;
-    right: 5px; 
+    position: fixed;  
+    transform: translateX(-90px);
 }
 
 .cmn-btncircle {
@@ -551,7 +550,6 @@ header nav ul {
     font-size: 6px;
     text-align: center;
     background-color: #cb1810;
-    transform: translateX(-60px); 
 }
 
 
@@ -572,6 +570,10 @@ header nav ul {
     margin-bottom: 40px;
 }
 
+.galeriasQuery {
+    transform: translateX(-18px);
+}
+
 .galerias {
     margin-bottom: 40px;
 }
@@ -580,7 +582,8 @@ header nav ul {
     width: 120px;
     height: 40px;
     font-size: 11pt;
-    border-radius: 20px; 
+    border-radius: 17px; 
+    border: #cb1810 solid .20rem;
 }
 
 .nota {
@@ -641,6 +644,11 @@ footer section span {
 
 .conjuntoInicio p {
     margin: 10px 30px;
+}
+
+.cmn-divfloat {
+    position: fixed;  
+    transform: translateX(-50px);
 }
 
 }
