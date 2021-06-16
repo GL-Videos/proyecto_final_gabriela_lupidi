@@ -22,7 +22,7 @@ header {
     background-image: linear-gradient(black 20%, rgba(0, 0, 0, 0.000));
     margin-bottom: 100px;
     width: 100%;
-    border-bottom: solid .20rem rgba(255, 255, 255, 0.726);
+    border-bottom: solid .20rem rgba(255, 255, 255, 0.725);
     }
 
 .logo {
@@ -339,25 +339,33 @@ footer section span {
     }
 
 
+
+
 /*-------------------------------------------BOTON FLOTANTE-------------------------------------------------------*/
 
-.cmn-divfloat {
-    position: fixed !important;
-    bottom: 45px;
-    right: 15px;
-    display: none;
+.btn-home {
+    position: fixed;
     z-index: 10000;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 30px;
+    border-radius: 100px;
+    background-color: #cb1810;
+    text-align: center;
+    vertical-align: middle;
     }
 
-.cmn-btncircle {
-    width: 40px !important;
-    height: 40px !important;
-    padding: 6px 0px;
-    border-radius: 15px;
-    font-size: 18px;
-    text-align: center;
-    background-color: #cb1810;
+.btn-borde img {
+    width: 25px;
+    height: 25px;
+    padding: 6px;
     }
+
+.btn-borde img:hover, .btn-home:hover {
+    transform: scale(1.1);
+    transition: 00.5s ease;
+}
 
 
 /*---------------------------------------CSS VIDEOS*//*CSS DISEÑOS-----------------------------------------------*/
@@ -542,20 +550,19 @@ header nav ul {
 }
 
 
-.cmn-divfloat {
-    position: fixed;  
-    transform: translateX(-90px);
-}
+.btn-home {
+    position: fixed;
+    z-index: 10000;
+    width: 40px;
+    height: 40px;
+    right: 120px;
+    bottom: 30px;
+    }
 
-.cmn-btncircle {
-    width: 10px;
-    height: 10px;
-    padding: 10px 0px;
-    border-radius: 5px;
-    font-size: 6px;
-    text-align: center;
-    background-color: #cb1810;
-}
+.btn-borde img {
+    width: 25px;
+    height: 25px;
+    }
 
 
 .banner img {
@@ -575,16 +582,13 @@ header nav ul {
     margin-bottom: 40px;
 }
 
-.galeriasQuery {
-    transform: translateX(-18px);
-}
 
 .galerias {
     margin-bottom: 40px;
 }
 
 .galerias li {
-    width: 120px;
+    width: 150px;
     height: 40px;
     font-size: 11pt;
     border-radius: 17px; 
@@ -672,10 +676,19 @@ footer section span {
     margin: 10px 30px;
 }
 
-.cmn-divfloat {
-    position: fixed;  
-    transform: translateX(-50px);
-}
+.btn-home {
+    position: fixed;
+    z-index: 10000;
+    width: 50px;
+    height: 50px;
+    right: 40px;
+    bottom: 30px;
+    }
+
+.btn-borde img {
+    width: 30px;
+    height: 30px;
+    }
 
 }
 
