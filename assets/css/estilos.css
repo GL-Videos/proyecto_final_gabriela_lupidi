@@ -701,7 +701,7 @@ footer section span {
 }
 
 .galeria-videos-modal .videoModal iframe {
-    width: 300px;
+    width: 270px;
     height: auto;
 }
 
@@ -723,8 +723,12 @@ footer section span {
 }
 
 .galeria-videos-modal-reverse .videoModal iframe {
-    width: 300px;
+    width: 270px;
     height: auto;
+}
+
+.cuadros h1 { 
+	font-size: 20pt;
 }
 
 
@@ -818,6 +822,10 @@ footer section span {
     height: 300px;
 }
 
+.cuadros h1 { 
+	font-size: 30pt;
+}
+
 }
 
 
@@ -870,6 +878,10 @@ footer section span {
 .galeria-videos-modal-reverse .videoModal iframe {
     width: 500px;
     height: 300px;
+}
+
+.cuadros h1 { 
+	font-size: 40pt;
 }
 
 }
