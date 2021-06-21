@@ -84,11 +84,6 @@ header nav ul {
     opacity: 1;
     }
 
-.subMenuCorreccion {
-    width: 250%;
-    transform: translateX(-32px);
-    }
-
 .linkActivo {
     border-bottom: white .15rem solid;
 }
@@ -104,7 +99,7 @@ header nav ul {
     font-size: 25pt;
     font-weight: bold;
     font-family: 'Cabin', sans-serif;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
     text-shadow: rgb(39, 39, 39) 2px 2px;
     }
 
@@ -370,6 +365,17 @@ footer section span {
 
 /*------------------------------------------CSS VIDEOS / DISEÑOS-------------------------------------------------*/
 
+.textoGalerias {
+    color: white;
+    font-size: 15pt;
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    text-shadow: rgb(39, 39, 39) 2px 2px;
+    text-align:center;
+    margin: 0 10px 50px 10px;
+    transform: translateY(-30px);
+}
+
 .galeria-videos-modal {
     display: flex;
     flex-flow: row wrap;
@@ -401,7 +407,17 @@ footer section span {
     background-color: rgba(133, 133, 133, 0.137); 
     border-radius: 10px;
     padding: 30px;
+    animation-name: giro;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 1s;
 }
+
+@keyframes giro { 
+    0% {transform: rotateY(0)} 
+    100% {transform: rotateY(360deg)} 
+    }
 
 .galeria-videos-modal-reverse {
     display: flex;
@@ -434,6 +450,38 @@ footer section span {
     background-color: rgba(133, 133, 133, 0.137); 
     border-radius: 10px;
     padding: 30px;
+    animation-name: giro-reverse;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+@keyframes giro-reverse { 
+    0% {transform: rotateY(0)} 
+    100% {transform: rotateY(360deg)} 
+    }
+
+.galeriaInvitacion {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    
+}
+
+.galeriaInvitacion img {
+    width: 150px;
+    border: #cb1810 solid;
+    box-shadow: rgba(0, 0, 0, 0.500) 4px 4px;
+    background-color: rgba(133, 133, 133, 0.137); 
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+}
+
+.galeriaInvitacion img:hover {
+    transform: scale(1.2);
+    transition: all 1s ease;
 }
 
 
@@ -681,6 +729,12 @@ footer section span {
 
 /*CSS Videos y Diseños*/
 
+.textoGalerias {
+    font-size: 12pt;
+    margin: 10px 10px 50px 10px;
+    transform: translateY(0px);
+}
+
 .galeria-videos-modal {
     display: flex;
     flex-flow: column wrap;
@@ -776,6 +830,12 @@ footer section span {
 
 /*CSS Videos y Diseños*/
 
+.textoGalerias {
+    font-size: 14pt;
+    margin: 10px 15px 50px 15px;
+    transform: translateY(0px);
+}
+
 .galeria-videos-modal {
     display: flex;
     flex-flow: column wrap;
@@ -833,6 +893,12 @@ footer section span {
 @media (min-width: 1024px) and (max-width: 1200px) {
 
 /*CSS Videos y Diseños*/
+
+.textoGalerias {
+    font-size: 15pt;
+    margin: 10px 10px 50px 10px;
+    transform: translateY(0px);
+}
 
 .galeria-videos-modal {
     display: flex;
